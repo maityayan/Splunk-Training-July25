@@ -33,6 +33,9 @@ ANS1: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status
 ANS2: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>299 AND status<400
 ANS3: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>=300 AND status<400
 
+
+Homework:
+
 Q. We want to see the status values of excluding 300-399
 
 sample: -
@@ -41,6 +44,16 @@ status
 204
 400
 404
+
+
+Q. How to use search command as a case sensitive
+
+Query : | makeresults | fields - _time | eval aa="Ayan,AYAN,AyaN" , name=split(aa,",") | fields - aa| mvexpand name
+
+Output:
+name
+AYAN
+
 
 
 
