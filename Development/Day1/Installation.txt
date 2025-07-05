@@ -1,0 +1,34 @@
+Installation Of Splunk 
+
+# cd /opt
+Downlaod splunk 
+# wget <splunk_ent_package_file>.tgz 
+Unzip the file 
+# tar -xvzf <splunk_ent_package_file>.tgz
+Start splunk
+# cd /opt/splunk/bin
+
+# ./splunk start  
+OR 
+# ./splunk start —accept-license 
+
+——————————
+[root@testlab bin]# ./splunk start --accept-license
+
+This appears to be your first time running this version of Splunk.
+
+Splunk software must create an administrator account during startup. Otherwise, you cannot log in.
+Create credentials for the administrator account.
+Characters do not appear on the screen when you type in credentials.
+
+Please enter an administrator username: admin
+Password must contain at least:
+   * 8 total printable ASCII character(s).
+Please enter a new password: 12345678
+Please confirm new password: 12345678
+———————————
+
+enable boot start splunk
+
+# ./splunk enable boot-start -user root -systemd-managed 1
+# ./splunk stop|status|stop|restart
