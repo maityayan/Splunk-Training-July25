@@ -35,6 +35,13 @@ ANS3: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status
 
 Q. We want to see the status values of excluding 300-399
 
+sample: -
+status
+200
+204
+400
+404
+
 
 
 
