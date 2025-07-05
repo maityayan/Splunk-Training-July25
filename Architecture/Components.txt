@@ -1,0 +1,111 @@
+splunk uf package —— ( CLI )
+Universal Forwarder (UF) —
+9997 - Splunk Forwarding and Receiving port 
+
+sourcetype
+Index 
+
+splunk enterprise package ——— ( CLI + GUI )
+Heavy Forwarder ( HF ) 
+—— Parsing 
+Formatting the data 
+This is ayan he is bengalore also he has one car
+This is anmay he is in delhi and he has one bike 
+
+This is ayan he is bengalore also he has one car
+
+This is anmay he is in delhi and he has one bike 
+
+——Masking 
+This is krishna and his credit card no is 999039022
+This is Rajlakshmi and her credit card  no is 253525352
+
+———
+This is krishna and his credit card no is xxxx9022
+This is Rajlakshmi and her credit card  no is xxxx5352
+———
+
+—— Filtering 
+This is krishna and his credit card no is xxxx9022 
+He also plays football
+This is Rajlakshmi and her credit card  no is xxxx5352
+She goes to college 
+
+
+This is krishna and his credit card no is xxxx9022 
+This is Rajlakshmi and her credit card  no is xxxx5352
+
+
+Indexer ( IDX)
+
+—
+index —
+Usa_data 
+Japan_data 
+Fr_data 
+
+——— Metadata———
+host — ip or host of the application server ( 10.0.0.45 or database1.usa.com )
+source — exact path of the data on the host (C:\Program Files\vlcplayer\recording.txt  OR /tmp/test.txt ) 
+sourcetype - category of the data 
+
+Txtdata
+a.txt 
+b.txt 
+
+Xmldata 
+a.xml.
+b.xml
+
+jsonlog 
+a.json
+
+
+Search Head ( SH )
+
+8089 - Splunk management port 
+8000 - Splunk web port ( GUI )
+
+Deployment Server ( DS )
+License Master ( LM )
+
+— 5gb ——
+——
+     License Pool —— 3GB —— IDX  
+                             — 2GB  — SH, DS
+    License Stacking —— 
+      —— -5GB
+     —— 10 GB 
+
+——————— 15 GB ———
+
+—— > 15 GB 
+
+—— 5 times in a rolling period of 30days 
+28 th june —— 1
+………
+
+5th — 2
+6th -3
+20th - 4
+22nd - 5
+
+23 ——6. — violation ——
+
+Forwarder Lincense 
+
+Enterprise License 
+data will be indexed, search will be disabled  
+
+
+………
+26 th July 
+
+
+
+5 why 
+
+
+CRC - cyclic redundancy  check 
+
+seek pointer —— 
