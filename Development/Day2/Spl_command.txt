@@ -33,4 +33,12 @@ ANS1: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status
 ANS2: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>299 AND status<400
 ANS3: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>=300 AND status<400
 
+Q. We want to see the status values of excluding 300-399
+
+
+
+
+
+
+
 
