@@ -1,1 +1,29 @@
+SPL - Splunk Search Processing Language
+
+
+this is ayan01 and he lives in kolkata and his age is 29
+this is subham88 and he lives in kolkata and his age is 24
+this is abrar78 and he lives in vizak and his age is 35
+
+
+@ name 3
+ >>> ayan01
+ >>> subham88
+>>>> abrar 78
+
+location 
+ >>>> kolkata 
+ >>> vizak 
+
+# age 3
+29
+24
+35
+
+-------------------------
+
+index="_internal" sourcetype=splunkd_ui_access | search linuX
+
+
+index="_internal" sourcetype=splunkd_ui_access | table status | dedup status 
 
