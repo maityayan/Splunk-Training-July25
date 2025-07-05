@@ -29,3 +29,8 @@ index="_internal" sourcetype=splunkd_ui_access | table status | dedup status
 
 Q. we want to see the status values of 300 - 399
 
+ANS1: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>=300 AND status<=399
+ANS2: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>299 AND status<400
+ANS3: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status| search status>=300 AND status<400
+
+
