@@ -14,7 +14,7 @@ Enforcement License ------
 | mvexpand aa 
 | eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
 
-Q 2: I want to see the name only AYAN
+Q 2: I want to see the name only AYAN ( age will be 29 for this result)
 ---------------------
 
 | makeresults 
