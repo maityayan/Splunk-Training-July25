@@ -3,7 +3,12 @@ admin|12345678
 index=test_   sourcetype=access_combined 
 
 
+Homework---------------
+Q: Find the Difference:
+No-enforcement License ------- 
+Enforcement License ------
 ---------------------
+
 | makeresults 
 | fields - _time 
 | eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") 
@@ -11,6 +16,13 @@ index=test_   sourcetype=access_combined
 | eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
 
 Q 1: find the persons whose age are more than 20 but less than 30
+ans: | makeresults 
+| fields - _time 
+| eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") 
+| mvexpand aa 
+| eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
+| table age 
+| search age>20 AND age<30
 
 
 -------------------------
