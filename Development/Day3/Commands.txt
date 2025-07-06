@@ -1,3 +1,7 @@
+index=test_   sourcetype=access_combined 
+
+
+---------------------
 | makeresults 
 | fields - _time 
 | eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") 
