@@ -1,3 +1,9 @@
-| makeresults | fields - _time | eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") | mvexpand aa | eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
+| makeresults 
+| fields - _time 
+| eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") 
+| mvexpand aa 
+| eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
+
+Q: find the persons whose age are more than 20 but less than 30
 
 
