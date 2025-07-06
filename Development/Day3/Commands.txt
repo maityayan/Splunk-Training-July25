@@ -34,6 +34,7 @@ ans: | makeresults
 
 
 -------------------------
+Q. How to use search command as a case sensitive
 | makeresults 
 | fields - _time 
 | eval aa="this is AYAN and he lives in kolkata and his age is 29,this is ayan and he lives in kolkata and his age is 24,this is aYan and he lives in vizak and his age is 35" , aa=split(aa,",") 
