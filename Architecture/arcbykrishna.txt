@@ -1,1 +1,58 @@
 
+UNIVERSAL FORWARDER FOR THE CLIENT SIDE ( APPLICATION SIDE )
+RESPONSIBILITIES - SENDING DATA TO HF
+PORT USED -9997
+
+
+HF: HF have capability of prsing and filtering the data 
+After configuring UF with HF we needto enable the receving port 9997 to recive the data
+
+
+------------------
+5gb 
+
+
+7gb -------------
+------------ Breaching ---------
+1 -------- 6th july 
+2 ----  7th july
+3 ---- 10th july
+4 ----- 23th july
+5 ----- 28th july
+-------------------
+6 ------- violation 
+
+-----------
+reset key -------- license 
+0 ----- 
+
+
+
+---------
+----- searching will be blocked 
+----- there won't be any impact on indexing 
+---------
+
+5th Aug
+
+
+0 ------
+10 ---- 7gb --- 10th Aug -- 1
+
+9th sep 
+
+
+------------------
+
+
+Difference:
+No-enforcement License ------- 
+Enforcement License ------
+
+
+
+
+
+
+
+
