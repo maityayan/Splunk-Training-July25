@@ -46,13 +46,9 @@ status
 404
 
 
-Q. How to use search command as a case sensitive
 
-Query : | makeresults | fields - _time | eval aa="Ayan,AYAN,AyaN" , name=split(aa,",") | fields - aa| mvexpand name
 
-Output:
-name
-AYAN
+
 
 Splunk SH: https://34.29.43.154:8000
 
