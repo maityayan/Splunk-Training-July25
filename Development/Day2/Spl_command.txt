@@ -45,7 +45,7 @@ status
 400
 404
 
-
+Ans: index="_internal" sourcetype=splunkd_ui_access |table status |dedup status | search NOT (status>=300 AND status<=399)
 
 
 
