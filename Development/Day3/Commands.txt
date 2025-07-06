@@ -1,3 +1,5 @@
+Splunk SH: https://34.29.43.154:8000
+admin|12345678
 index=test_   sourcetype=access_combined 
 
 
