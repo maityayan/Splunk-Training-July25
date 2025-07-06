@@ -4,6 +4,6 @@
 | mvexpand aa 
 | eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
 
-Q: find the persons whose age are more than 20 but less than 30
+Q 1: find the persons whose age are more than 20 but less than 30
 
 
