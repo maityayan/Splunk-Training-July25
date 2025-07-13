@@ -1,1 +1,130 @@
+1 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,bytes,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300 | fields - status,method
+2	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,bytes,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300 | fields status,method
+3	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,bytes,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300 | fields - status
+4	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,bytes,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300
+5	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,bytes,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300 | table TransactionId , method
+6	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300 | table TransactionId , method,date_*
+7	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status,date_* 
+| dedup TransactionId,method,status | search status>=200 AND status<=300
+8	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status 
+| dedup TransactionId,method,status | search status>=200 AND status<=300 | table TransactionId,method
+9	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status 
+| dedup TransactionId,method,status | search status>=200 AND status<=300
+10	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status | dedup TransactionId,method,status
+11	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method | dedup TransactionId,method
+12	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method | dedup method
+13	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method | dedup TransactionId
+14	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,status | dedup TransactionId
+15	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method| dedup TransactionId
+16	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId | dedup TransactionId
+17	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId
+18	 index=_internal sourcetype=splunkd_ui_access 
+| table so*
+19	 index=_internal sourcetype=splunkd_ui_access 
+| table s*
+20	 index=_internal sourcetype=splunkd_ui_access 
+| table date_*
+21	 index=_internal sourcetype=splunkd_ui_access 
+| table date_hour,date_mday
+22	 index=_internal sourcetype=splunkd_ui_access 
+| table TransactionId,method,status
+23	 index=_internal sourcetype=splunkd_ui_access |table TransactionId,method
+24	 index=_internal sourcetype=splunkd_ui_access | table TransactionId,method
+25	 index=_internal sourcetype=splunkd_ui_access | table TransactionId method
+26	 index=_internal sourcetype=splunkd_ui_access | table TransactionId
+27	 index=_internal sourcetype=splunkd_ui_access
+28	 index=_internal sourcetype=splunkd_ui_access 
+| rename method as department | replace "GET" with "ME", "POST" with "CSE" IN department | search department="CSE"
+29	 index=_internal sourcetype=splunkd_ui_access 
+| rename method as department | replace "GET" with "ME", "POST" with "CSE" IN department | search department="ME"
+30	 index=_internal sourcetype=splunkd_ui_access 
+| rename method as department | replace "GET" with "ME", "POST" with "CSE" IN department
+31	 index=_internal sourcetype=splunkd_ui_access | replace "GET" with "ME", "POST" with "CSE" IN '_raw'
+| rename method as department
+32	 index=_internal sourcetype=splunkd_ui_access | replace "GET" with "ME", "POST" with "CSE" IN _raw
+| rename method as department
+33	 index=_internal sourcetype=splunkd_ui_access 
+| rename method as department 
+| replace "GET" with "ME", "POST" with "CSE" IN department | search department="CSE"
+34	 index=_internal sourcetype=splunkd_ui_access 
+| rename method as department 
+| replace "GET" with "ME", "POST" with "CSE" IN department | search department="ME"
+35	 index=_internal sourcetype=splunkd_ui_access 
+| rename method as department 
+| replace "GET" with "ME", "POST" with "CSE" IN department |
+36	 index=_internal sourcetype=splunkd_ui_access | rename method as department | replace "GET" with "ME", "POST" with "CSE" IN department
+37	 index=_internal sourcetype=splunkd_ui_access | rename method as department | replace "GET" with "ME" department | replace "POST" with "CSE" department
+38	 index=_internal sourcetype=splunkd_ui_access | rename method as department | replace "GET" with "ME" "POST" with "CSE" department
+39	 index=_internal sourcetype=splunkd_ui_access | rename method as department | replace GET with ME POST with CSE department
+40	 index=_internal sourcetype=splunkd_ui_access | rename method as department | replace GET with ME , POST with CSE department
+41	 index=_internal sourcetype=splunkd_ui_access | search method="GET" OR method="POST"
+42	 index=_internal sourcetype=splunkd_ui_access | search method="GET" | search method="POST"
+43	 index=_internal sourcetype=splunkd_ui_access | search method="GET"
+44	 username - admin
 
+Password - 12345678
+
+| makeresults 
+| fields - _time 
+| eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") 
+| mvexpand aa 
+| eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) search age=case( " greater than 20, less than 30 " )
+45	 username - admin
+
+Password - 12345678
+
+| makeresults 
+| fields - _time 
+| eval aa="this is ayan01 and he lives in kolkata and his age is 29,this is subham88 and he lives in kolkata and his age is 24,this is abrar78 and he lives in vizak and his age is 35" , aa=split(aa,",") 
+| mvexpand aa 
+| eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) search ( " greater than 20, less than 30 " )
+46	 index=test_ sourcetype=access_combined
+47	 index=test_
+48	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=0fa39fdd7d64c118a1ba03fb07cd52e9 NOT POST
+49	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=0fa39fdd7d64c118a1ba03fb07cd52e9 NOT POST method=DELETE
+50	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=0fa39fdd7d64c118a1ba03fb07cd52e9 AND POST
+51	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=0fa39fdd7d64c118a1ba03fb07cd52e9
+52	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=0fa39fdd7d64c118a1ba03fb07cd52e9 OR TransactionId=b283886494b3efc43441ef5cc69a7709
+53	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=*9
+54	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=9*
+55	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=d*
+56	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=b*
+57	 index="_internal" sourcetype=splunkd_ui_access  | search TransactionId=c*
+58	 index="_internal" sourcetype=splunkd_ui_access | search c*
+59	 index="_internal" sourcetype=splunkd_ui_access
+60	 index="_internal" sourcetype=splunkd_ui_access | search b283*
+61	 index="_internal" sourcetype=splunkd_ui_access | search b283886494b3efc43441ef5cc69a7709
+62	 index="_internal"
+63	 index="_internal" sourcetype=splunkd_ui_access |table status |dedup status | search NOT (status>=300 AND status<=399)
+64	 index="_internal" sourcetype=splunkd_ui_access |table status |dedup status
+65	 index=test_   sourcetype=access_combined| bin
+66	 index=test_   sourcetype=access_combined| head
+67	 index=test_   sourcetype=access_combined| head 20
+68	 index=test_   sourcetype=access_combined  head
+69	 sourcetype
+70	 index=testlab
+71	 index=testla
+72	 index=test_   sourcetype=access_combined
