@@ -7,6 +7,7 @@ Homework---------------
 Q: Find the Difference:
 No-enforcement License ------- 
 Enforcement License ------
+ANS: https://copilot.microsoft.com/chats/4ko9pi4FfzRBauHV1baPb
 
 Q. How to use search command as a case sensitive
 
@@ -17,6 +18,13 @@ Q. How to use search command as a case sensitive
 | eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
 
 Q 2: I want to see the name only AYAN ( age will be 29 for this result)
+ANS : 
+| makeresults 
+| fields - _time 
+| eval aa="this is AYAN and he lives in kolkata and his age is 29,this is ayan and he lives in kolkata and his age is 24,this is aYan and he lives in vizak and his age is 35" , aa=split(aa,",") 
+| mvexpand aa 
+| eval age=mvindex(split(aa," "),-1) , name=mvindex(split(aa," "),2) 
+| search name=CASE(aYan)
 ---------------------
 
 | makeresults 
